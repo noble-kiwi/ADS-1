@@ -6,14 +6,11 @@
 bool checkPrime(uint64_t value) {
     if (value < 2) {
         return false;
-    }
-    else if (value == 2 || value == 3) {
+    } else if (value == 2 || value == 3) {
         return true;
-    }
-    else if (value % 2 == 0 || value % 3 == 0) {
+    } else if (value % 2 == 0 || value % 3 == 0) {
         return false;
-    }
-    else {
+    } else {
         for (int i = 4; i < (value/2)+1; i++) {
             if (value % i == 0) {
                 return false;
@@ -24,8 +21,8 @@ bool checkPrime(uint64_t value) {
 }
 
 uint64_t nPrime(uint64_t n) {
-    if (n == 0) { 
-        return 0; 
+    if (n == 0) {
+        return 0;
     }
     uint64_t number = 0;
     uint64_t count = 0;
